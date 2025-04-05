@@ -40,10 +40,13 @@
             "Auch kleine Schritte bringen dich voran."
         ];
 
-        function zeigeSpruch() {
-            const zufall = Math.floor(Math.random() * sprueche.length);
-            document.getElementById('spruch').textContent = sprueche[zufall];
-        }
+        let aktuellerIndex = 0;
+
+function zeigeSpruch() {
+    document.getElementById('spruch').textContent = sprueche[aktuellerIndex];
+    aktuellerIndex = (aktuellerIndex + 1) % sprueche.length;
+}
+
     </script>
 </body>
 </html>
